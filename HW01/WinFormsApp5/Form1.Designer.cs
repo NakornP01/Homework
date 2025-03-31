@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            btnok1 = new Button();
+            textBoxMain = new TextBox();
+            btnokMain = new Button();
             btnclear = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // textBoxMain
             // 
-            textBox1.Location = new Point(348, 191);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 0;
+            textBoxMain.Location = new Point(348, 191);
+            textBoxMain.Name = "textBoxMain";
+            textBoxMain.Size = new Size(100, 23);
+            textBoxMain.TabIndex = 0;
             // 
-            // btnok1
+            // btnokMain
             // 
-            btnok1.Location = new Point(300, 240);
-            btnok1.Name = "btnok1";
-            btnok1.Size = new Size(75, 23);
-            btnok1.TabIndex = 1;
-            btnok1.Text = "Ok";
-            btnok1.UseVisualStyleBackColor = true;
-            btnok1.Click += btnok1_Click;
+            btnokMain.Location = new Point(300, 240);
+            btnokMain.Name = "btnokMain";
+            btnokMain.Size = new Size(75, 23);
+            btnokMain.TabIndex = 1;
+            btnokMain.Text = "Ok";
+            btnokMain.UseVisualStyleBackColor = true;
+            btnokMain.Click += btnokMain_Click;
             // 
             // btnclear
             // 
@@ -66,8 +66,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(btnclear);
-            Controls.Add(btnok1);
-            Controls.Add(textBox1);
+            Controls.Add(btnokMain);
+            Controls.Add(textBoxMain);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -76,8 +76,8 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private Button btnok1;
+        private TextBox textBoxMain;
+        private Button btnokMain;
         private Button btnclear;
     }
 }

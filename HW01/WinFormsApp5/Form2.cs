@@ -13,24 +13,24 @@ namespace WinFormsApp5
 {
     public partial class Form2 : Form
     {
-        Form1 frm1;
+        Form1 frmMain;
 
         public Form2(Form1 form1)
         {
             InitializeComponent();
-            frm1 = form1;
+            frmMain = form1;
         }
 
-        private void btnok2_Click(object sender, EventArgs e)
+        private void btnokSecond_Click(object sender, EventArgs e)
         {
-            frm1.SetText(textBox2.Text); // ส่งข้อความกลับไป Form1
-            frm1.Show(); // แสดง Form1
+            frmMain.SetText(textBoxSecond.Text); // ส่งข้อความกลับไป Form1
+            frmMain .Show(); // แสดง Form1
             this.Hide(); // ซ่อน Form2    
         }
 
         public void SetText(string text)
         {
-            textBox2.Text = text;
+            textBoxSecond   .Text = text;
         }
 
         private void btncancel_Click(object sender, EventArgs e)
