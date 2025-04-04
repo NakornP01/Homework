@@ -35,14 +35,6 @@ namespace WinFormsApp5
         }
 
 
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {
-            if (pictureBoxsecond.Image != null)
-            {
-                pictureBoxsecond.Image.Dispose();
-            }
-            base.OnFormClosing(e);
-        }
 
         public void SetText(string text)
         {
