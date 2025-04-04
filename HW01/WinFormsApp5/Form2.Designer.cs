@@ -31,6 +31,9 @@
             btnokSecond = new Button();
             btncancel = new Button();
             textBoxSecond = new TextBox();
+            pictureBoxsecond = new PictureBox();
+            btnuploadsecond = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxsecond).BeginInit();
             SuspendLayout();
             // 
             // btnokSecond
@@ -56,20 +59,41 @@
             // textBoxSecond
             // 
             textBoxSecond.Location = new Point(332, 189);
-            textBoxSecond.Name = "textBox1";
+            textBoxSecond.Name = "textBoxSecond";
             textBoxSecond.Size = new Size(100, 23);
             textBoxSecond.TabIndex = 2;
+            // 
+            // pictureBoxsecond
+            // 
+            pictureBoxsecond.Location = new Point(41, 31);
+            pictureBoxsecond.Name = "pictureBoxsecond";
+            pictureBoxsecond.Size = new Size(207, 203);
+            pictureBoxsecond.TabIndex = 3;
+            pictureBoxsecond.TabStop = false;
+            // 
+            // btnuploadsecond
+            // 
+            btnuploadsecond.Location = new Point(91, 262);
+            btnuploadsecond.Name = "btnuploadsecond";
+            btnuploadsecond.Size = new Size(75, 23);
+            btnuploadsecond.TabIndex = 4;
+            btnuploadsecond.Text = "upload";
+            btnuploadsecond.UseVisualStyleBackColor = true;
+            btnuploadsecond.Click += btnuploadsecond_Click;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnuploadsecond);
+            Controls.Add(pictureBoxsecond);
             Controls.Add(textBoxSecond);
             Controls.Add(btncancel);
             Controls.Add(btnokSecond);
             Name = "Form2";
             Text = "Form2";
+            ((System.ComponentModel.ISupportInitialize)pictureBoxsecond).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -79,5 +103,7 @@
         private Button btnokSecond;
         private Button btncancel;
         private TextBox textBoxSecond;
+        private PictureBox pictureBoxsecond;
+        private Button btnuploadsecond;
     }
 }

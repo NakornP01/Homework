@@ -23,19 +23,50 @@ namespace WinFormsApp5
 
         private void btnokSecond_Click(object sender, EventArgs e)
         {
-            frmMain.SetText(textBoxSecond.Text); // ส่งข้อความกลับไป Form1
-            frmMain .Show(); // แสดง Form1
-            this.Hide(); // ซ่อน Form2    
+            frmMain.SetText(textBoxSecond.Text);
+
+            if (pictureBoxsecond.Image != null)
+            {
+                frmMain.SetImage(pictureBoxsecond.Image);
+            }
+
+            frmMain.Show();
+            this.Hide();
+        }
+
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (pictureBoxsecond.Image != null)
+            {
+                pictureBoxsecond.Image.Dispose();
+            }
+            base.OnFormClosing(e);
         }
 
         public void SetText(string text)
         {
-            textBoxSecond   .Text = text;
+            textBoxSecond.Text = text;
         }
 
+        public void SetImage(Image img)
+        {
+            pictureBoxsecond.Image = img;
+        }
         private void btncancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnuploadsecond_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            DialogResult result = dialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                Image selectedImage = Image.FromFile(dialog.FileName);
+                pictureBoxsecond.Image = selectedImage;
+            }
         }
     }
 }
